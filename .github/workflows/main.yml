@@ -86,7 +86,7 @@ jobs:
     - name: Update tag in deployment file
       run: |
         sed -i 's/tag: .*/tag: "${{github.run_number}}"/' helm/shopping-cart/values.yaml
-        cat helm/go-web-app-chart/values.yaml | grep tag
+        cat helm/shopping-cart/values.yaml | grep tag
 
     - name: Commit and push changes
       run: |
