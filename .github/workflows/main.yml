@@ -32,8 +32,10 @@ jobs:
         cache: maven
         
     - name: Build with Maven
-      run: mvn clean package
-
+      run: |
+        mvn clean package
+        ls target/
+      
 
   Docker-build-and-push:
 
